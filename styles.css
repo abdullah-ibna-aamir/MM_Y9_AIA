@@ -15,6 +15,8 @@ main, .hero, .social-media, .info-leak, .publicity {
   align-items: center;
   padding: 12px 40px 12px 24px;
   background: #b2f0fc;
+  position: relative;
+  z-index: 2002;
 }
 .header .logo {
   width: 48px;
@@ -28,9 +30,55 @@ main, .hero, .social-media, .info-leak, .publicity {
   font-weight: bold;
   border: 2px solid #222;
 }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  z-index: 1001;
+}
+.nav-toggle .bar {
+  width: 26px;
+  height: 3px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 .header nav {
   display: flex;
   gap: 8px;
+  transition: max-height 0.3s, opacity 0.3s;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: transparent;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  transition: max-height 0.3s, opacity 0.3s;
+  z-index: 2001;
+}
+.header nav.open {
+  max-height: 400px;
+  opacity: 1;
+  pointer-events: auto;
+  padding: 8px 0 12px 16px;
+  z-index: 2001;
 }
 .header .nav-btn {
   background: #fff;
@@ -787,5 +835,86 @@ footer {
   }
   .contact-details {
     width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .header nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transition: max-height 0.3s, opacity 0.3s;
+    z-index: 2001;
+  }
+  .header nav.open {
+    max-height: 400px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 8px 0 12px 16px;
+    z-index: 2001;
+  }
+  .nav-backdrop {
+    display: none;
+  }
+  .nav-backdrop.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(178, 240, 252, 0.85);
+    z-index: 2000;
+  }
+  .header .nav-btn {
+    margin: 6px 0 0 0;
+    width: 90vw;
+    max-width: 320px;
+    text-align: left;
+    border-radius: 6px;
+    font-size: 1.08rem;
+  }
+}
+@media (min-width: 701px) {
+  .nav-toggle {
+    display: none !important;
+  }
+  .nav-backdrop {
+    display: none !important;
+  }
+  .header nav {
+    display: flex !important;
+    flex-direction: row !important;
+    position: static !important;
+    opacity: 1 !important;
+    max-height: none !important;
+    pointer-events: auto !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    z-index: auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .header .nav-btn {
+    margin: 0 0 0 4px !important;
+    width: auto !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    font-size: 1rem !important;
   }
 }

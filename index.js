@@ -319,6 +319,29 @@ function animateContactPage() {
   }
 }
 
+// Responsive nav bar toggle
+window.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('header nav');
+  const navBackdrop = document.querySelector('.nav-backdrop');
+  if (navToggle && nav && navBackdrop) {
+    navToggle.addEventListener('click', function(e) {
+      nav.classList.toggle('open');
+      navBackdrop.classList.toggle('active', nav.classList.contains('open'));
+    });
+    navBackdrop.addEventListener('click', function() {
+      nav.classList.remove('open');
+      navBackdrop.classList.remove('active');
+    });
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && !navToggle.contains(e.target) && !navBackdrop.contains(e.target)) {
+        nav.classList.remove('open');
+        navBackdrop.classList.remove('active');
+      }
+    });
+  }
+});
+
 window.addEventListener('DOMContentLoaded', function() {
   animateHeader();
   animateHero();
