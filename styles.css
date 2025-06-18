@@ -903,6 +903,38 @@ footer {
   opacity: 1;
   transform: none;
 } 
+/* --- Citations page animations --- */
+.animate-fadein {
+  animation: fadeInCitations 1.1s cubic-bezier(.4,0,.2,1);
+}
+.animate-fadein-delay {
+  animation: fadeInCitations 1.5s cubic-bezier(.4,0,.2,1) 0.3s both;
+}
+@keyframes fadeInCitations {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-down {
+  animation: slideDownCitations 1s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideDownCitations {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-left {
+  animation: slideLeftCitations 1s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideLeftCitations {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-right {
+  animation: slideRightCitations 1s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideRightCitations {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 @media (max-width: 900px) {
   .hero, .info-leak, .social-media, .publicity {
     flex-direction: column !important;
