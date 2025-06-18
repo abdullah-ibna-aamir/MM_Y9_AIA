@@ -11,6 +11,12 @@
     <div class="logo">
       <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="20" rx="3" fill="#fff" stroke="#222" stroke-width="2"/><path d="M2 2L16 14L30 2" stroke="#222" stroke-width="2"/></svg>
     </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="nav-backdrop"></div>
     <nav>
       <a class="nav-btn" href="index.html">Home</a>
       <a class="nav-btn active" href="breaches.html">Data Breaches</a>
@@ -23,50 +29,47 @@
   </header>
   <main>
     <section class="breach-hero">
-      <h1 class="breach-title">Data Breaches</h1>
+      <h1 class="breach-title">Data Breaches: It’s Actually Kinda Scary</h1>
+      <img src="Images/Breaches.png" alt="Data breach cartoon" style="width:100%;max-width:600px;margin:32px auto 0;display:block;border-radius:16px;box-shadow:0 4px 32px rgba(0,0,0,0.08);background:#eaf6fb;">
     </section>
     <section class="breach-examples">
-      <h2 class="examples-title">Examples</h2>
-      <div class="examples-steps">
-
-
-      </div>
+      <h2 class="examples-title">When Everything Just Gets Exposed</h2>
       <div class="examples-details">
         <div class="example-detail">
-        <div class="step"><span>01</span></div>
+          <div class="step"><span>01</span></div>
           <h3>Yahoo 2013</h3>
-          <p>Over 3 billion accounts were compromised in one of the largest breaches in history, exposing names, emails, and security questions.</p>
+          <p>Sometimes you think your info is safe, but then you hear 3 billion accounts got leaked. Like, you trust these sites with your details and then it’s just out there. It makes you wonder if anything online is actually private.</p>
         </div>
         <div class="example-detail">
-        <div class="step"><span>02</span></div> 
+          <div class="step"><span>02</span></div>
           <h3>Equifax 2017</h3>
-          <p>Personal data of 147 million people, including Social Security numbers, was leaked due to a vulnerability in web software.</p>
+          <p>It’s not even your fault, but suddenly your personal stuff is in someone else’s hands. 147 million people just… exposed. It’s hard not to feel powerless when companies mess up this bad.</p>
         </div>
         <div class="example-detail">
-        <div class="step"><span>03</span></div>
+          <div class="step"><span>03</span></div>
           <h3>Facebook 2019</h3>
-          <p>Hundreds of millions of user records were found on unsecured servers, including phone numbers and account IDs.</p>
+          <p>Sometimes it feels like you’re just a number. Your phone, your messages, your whole life—just sitting on a server, waiting for someone to mess up. And when they do, you’re the one who has to deal with it.</p>
         </div>
       </div>
     </section>
     <section class="breach-safety">
-      <h2 class="safety-title">How to stay safe</h2>
+      <h2 class="safety-title">Trying to Stay Safe (But It’s Stressful)</h2>
       <div class="safety-content">
         <div class="safety-info">
           <ul>
-            <li>Use strong, unique passwords for every account.</li>
-            <li>Enable two-factor authentication wherever possible.</li>
-            <li>Be cautious of phishing emails and suspicious links.</li>
-            <li>Regularly monitor your accounts for unusual activity.</li>
-            <li>Keep your software and devices up to date.</li>
+            <li>Everyone says “use strong passwords” but honestly, who can remember them all? Still, I try.</li>
+            <li>2FA is annoying but I do it because I don’t want to get hacked. Again.</li>
+            <li>Every time I get a weird email, I get a little paranoid. What if I click the wrong thing?</li>
+            <li>It’s exhausting checking for weird activity, but I do it because I have to.</li>
+            <li>Updates always pop up at the worst time, but I know if I ignore them, it’s just asking for trouble.</li>
           </ul>
         </div>
         <div class="safety-img">
-          <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity illustration">
+          <img src="Images/Concerns.png" alt="Cartoon hacker" style="border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.10);background:#eaf6fb;max-width:320px;">
         </div>
       </div>
       <div class="safety-signup">
-        <button class="signup-btn">Sign Up</button>
+        <button class="signup-btn">Sign Up for Data Safety Tips</button>
       </div>
     </section>
   </main>
@@ -78,8 +81,8 @@
     </div>
     <div class="footer-menu">
       <div class="footer-menu-col"><a href="companies.html">Large Companies</a></div>
-      <div class="footer-menu-col"><a href="#">Spyware</a></div>
-      <div class="footer-menu-col"><a href="breaches.html">Data Breaches</a></div>
+      <div class="footer-menu-col"><a href="spyware.html">Spyware</a></div>
+      <div class="footer-menu-col"><a href="breaches.html" class="active">Data Breaches</a></div>
       <div class="footer-menu-col"><a href="materials.html">Materials</a></div>
       <div class="footer-menu-col"><a href="citations.html">Citations</a></div>
     </div>
