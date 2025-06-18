@@ -319,6 +319,20 @@ function animateContactPage() {
   }
 }
 
+// Scroll animation for fade-in effect
+function handleScrollFadeIn() {
+  const elements = document.querySelectorAll('.scroll-fade-in');
+  const windowHeight = window.innerHeight;
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < windowHeight - 60) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', handleScrollFadeIn);
+window.addEventListener('DOMContentLoaded', handleScrollFadeIn);
+
 // Responsive nav bar toggle
 window.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.querySelector('.nav-toggle');
