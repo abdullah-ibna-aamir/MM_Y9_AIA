@@ -101,20 +101,5 @@
     </div>
   </footer>
   <script src="index.js"></script>
-  <script>
-// Highlight the correct nav link based on the current page
-const navLinks = document.querySelectorAll('.nav-btn');
-const page = location.pathname.split('/').pop();
-navLinks.forEach(link => {
-  link.classList.remove('active');
-  if (
-    (page === 'index.html' && link.getAttribute('href') === 'index.html') ||
-    (page === 'breaches.html' && link.getAttribute('href') === 'breaches.html') ||
-    (page === 'companies.html' && link.getAttribute('href') === 'companies.html')
-  ) {
-    link.classList.add('active');
-  }
-});
-</script>
 </body>
 </html>

@@ -340,6 +340,20 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Highlight the correct nav link based on the current page
+  const navLinks = document.querySelectorAll('.nav-btn');
+  const page = location.pathname.split('/').pop();
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === page) {
+      link.classList.add('active');
+    }
+    // Special case for root (/) or empty (index.html)
+    if ((page === '' || page === '/') && link.getAttribute('href') === 'index.html') {
+      link.classList.add('active');
+    }
+  });
 });
 
 window.addEventListener('DOMContentLoaded', function() {
