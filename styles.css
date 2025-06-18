@@ -759,6 +759,119 @@ footer {
   background: #e0eafc;
   transform: scale(1.08);
 }
+/* --- Extracted from inline styles --- */
+.img-card-rounded {
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  background: #eaf6fb;
+  max-width: 320px;
+}
+.img-contact-rounded {
+  width: 80%;
+  max-width: 320px;
+  margin: 24px 0 0 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  background: #eaf6fb;
+}
+.hero-col {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  min-height: unset;
+  display: flex;
+}
+.hero-title-mb {
+  margin-bottom: 32px;
+}
+.materials-img-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.img-materials {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 320px;
+  align-self: flex-start;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  background: #eaf6fb;
+}
+.fadein-box {
+  margin-top: 56px;
+  animation: fadeIn 1.2s ease;
+  background: #f7fbff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  padding: 36px 28px 32px 28px;
+  max-width: 900px;
+  width: 100%;
+  align-self: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.amj-title {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+.amj-subtitle {
+  font-size: 1.25rem;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  color: #1a4a7a;
+}
+.amj-text {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.assessment-main {
+  max-width: 600px;
+  margin: 64px auto 0 auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+.assessment-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+.assessment-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+.assessment-sign {
+  margin-top: 32px;
+  color: #888;
+  font-size: 1rem;
+}
+.img-spyware {
+  width: 100%;
+  max-width: 600px;
+  margin: 32px auto 0;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  background: #eaf6fb;
+}
+.citations-content {
+  width: 100%;
+  max-width: 900px;
+}
+.citations-desc {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+}
+.citations-list {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
 /* Add margin to bottom text sections so they don't go wall to wall */
 .breach-reflection,
 .additional-material-justifications {
