@@ -130,6 +130,7 @@ main, .hero, .social-media, .info-leak, .publicity {
   font-size: 1.45rem;
   font-weight: 700;
   margin-bottom: 12px;
+  text-align: center;
 }
 .hero-desc {
   font-family: 'Roboto', Arial, sans-serif;
@@ -766,6 +767,17 @@ footer {
   margin-bottom: 48px;
   max-width: 900px;
   box-sizing: border-box;
+}
+
+/* Center the main content box on the page */
+.material-justification-container {
+  margin: 40px auto; /* Top/bottom margin, auto left/right for centering */
+  max-width: 800px; /* Or your preferred width */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 36px 32px;
+  text-align: center;
 }
 
 /* Scroll animation styles */
